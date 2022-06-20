@@ -8,6 +8,8 @@ pipeline
             steps
             {
                 echo "maven stage"
+                archiveArtifacts artifacts: '*'
+                sh "ls"
             }
         }
         stage('Build Docker Image')
